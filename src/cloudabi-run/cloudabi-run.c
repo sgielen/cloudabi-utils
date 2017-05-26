@@ -114,6 +114,8 @@ static const argdata_t *parse_fd(yaml_event_t *event) {
     fd = STDOUT_FILENO;
   } else if (strcmp(value, "stderr") == 0) {
     fd = STDERR_FILENO;
+  } else if (strcmp(value, "stdin") == 0) {
+    fd = STDIN_FILENO;
   } else {
     char *endptr;
     errno = 0;
